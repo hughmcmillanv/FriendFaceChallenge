@@ -56,7 +56,6 @@ struct ContentView: View {
     func updateCache(with downloadedUsers: [User]) {
         for user in downloadedUsers {
             let cachedUser = CachedUser(context: moc)
-            
             cachedUser.id = user.id
             cachedUser.isActive = user.isActive
             cachedUser.name = user.name
